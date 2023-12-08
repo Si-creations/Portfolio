@@ -2,7 +2,7 @@ export default function Projects() {
   return (
     <div>
       <h1>Projects</h1>
-      <div className="project-container flex flex-col  items-center  min-h-screen bg-teal-300">
+      <div className="project-container flex flex-col  items-center  min-h-screen">
         <div className="Project-1 w-full">
           <div className="project-img">Project IMAGE</div>
           <div>Project name</div>
