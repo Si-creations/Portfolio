@@ -15,14 +15,14 @@
 
   * {
     box-sizing: border-box;
-    color: #ECECEC;
+    color: #ececec;
   }
 
   html,
   body {
-    max-width: 100vw;
+    
     overflow-x: hidden;
-    background-color: #1D1D1D;
+    background-color: #1d1d1d;
   }
 
   a {
@@ -30,13 +30,18 @@
     text-decoration: none;
   }
 
-  h1{
+  h1 {
     font-size: 2rem;
     font-weight: bold;
     padding: 1rem 0rem;
   }
 
-  
+  h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: .5rem;
+  }
+
   .line {
     width: 100%;
     height: 1px;
@@ -45,3 +50,12 @@
     margin: 1rem 0rem;
   }
 }
+
+.border {
+  border: 2px solid rgb(141, 139, 139);
+  border-radius: 0.4rem;
+  color: rgb(141, 139, 139);
+  margin-bottom: 1.5rem;
+}
+
+

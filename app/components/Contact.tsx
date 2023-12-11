@@ -1,4 +1,7 @@
 "use client";
+import { IoLogoGithub } from "react-icons/io";
+import { FaFacebook } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
 
 export default function Contact() {
   const handleSubmit = (e: { preventDefault: () => void }) => {
@@ -7,31 +10,65 @@ export default function Contact() {
   };
 
   return (
-    <div className="form flex flex-col   min-h-screen justify-center bg-gray1 p-4">
-      <div className="contact flex flex-col text-center">
-        <h1>Contact</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
-          nemo enim iste animi numquam nihil!
-        </p>
+    <div>
+      <div className="max-w-7xl mx-auto  flex flex-col sm:flex-row sm:gap-20 sm:px-4">
+        <div className="contact flex flex-col text-center pb-8 sm:text-left">
+          <h1>Contact</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
+            nemo enim iste animi numquam nihil!
+          </p>
+        </div>
+        <div className="form flex flex-col">
+          <form onSubmit={handleSubmit} className="px-2">
+            <label htmlFor="name">Meno:</label>
+            <input
+              className="w-full bg-transparent border textarea textarea-accent"
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
+
+            <label htmlFor="email">Email:</label>
+            <input
+              className="w-full bg-transparent border textarea textarea-accent"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+
+            <label className="" htmlFor="message">
+              Správa:
+            </label>
+            <textarea
+              className="w-full bg-transparent border textarea textarea-accent resize-none h-auto"
+              id="message"
+              name="message"
+              rows={2}
+              required
+            ></textarea>
+
+            <button
+              className="mx-auto w-full my-4 p-2  btn btn-accent"
+              type="submit"
+            >
+              Odoslať
+            </button>
+          </form>
+        </div>
       </div>
-      <div className="form flex flex-col ">
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-          <div className="line"></div>
-
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <div className="line"></div>
-
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" rows={4} required></textarea>
-          <div className="line"></div>
-        </form>
-        <button className="text-right" type="submit">Submit</button>
-        <div className="text-center">S-creations</div>
-        <div className="text-center">Icons</div>
+      <div className="max-w-7xl mx-auto sm:px-4">
+        <div className="line mx-auto"></div>
+        <div className="flex flex-col sm:flex-row justify-between">
+          <h1 className="text-center">S-creations</h1>
+          <div className="flex gap-3 justify-center items-center">
+            <IoLogoGithub className="text-2xl" />
+            <FaFacebook className="text-2xl" />
+            <FaLinkedin className="text-2xl" />
+          </div>
+        </div>
       </div>
     </div>
   );
