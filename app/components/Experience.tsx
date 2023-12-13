@@ -1,7 +1,7 @@
 export default function Experience() {
   return (
     <div>
-      <div className="text-center flex flex-col gap-8 p-4">
+      <div className="grid">
         <div>HTML</div>
         <div>CSS</div>
         <div>JavaScript</div>

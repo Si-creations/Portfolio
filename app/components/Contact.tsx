@@ -64,9 +64,9 @@ export default function Contact() {
         <div className="flex flex-col sm:flex-row justify-between">
           <h1 className="text-center">S-creations</h1>
           <div className="flex gap-3 justify-center items-center">
-            <IoLogoGithub className="text-2xl" />
-            <FaFacebook className="text-2xl" />
-            <FaLinkedin className="text-2xl" />
+            <IoLogoGithub className="text-2xl md:text-3xl lg:text-4xl" />
+            <FaFacebook className="text-2xl md:text-3xl lg:text-4xl" />
+            <FaLinkedin className="text-2xl md:text-3xl lg:text-4xl" />
           </div>
         </div>
       </div>

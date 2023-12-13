@@ -20,7 +20,6 @@
 
   html,
   body {
-    
     overflow-x: hidden;
     background-color: #1d1d1d;
   }
@@ -39,7 +38,7 @@
   h3 {
     font-weight: bold;
     text-transform: uppercase;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
 
   .line {
@@ -58,4 +57,42 @@
   margin-bottom: 1.5rem;
 }
 
+.grido {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-column-gap: 3rem;
+  grid-row-gap: 4rem;
+  justify-items: center;
+  align-content: space-between;
 
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    
+  }
+}
+
+
+
+/* min-height: 80vh;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+grid-column-gap: 3rem;
+grid-row-gap: 4rem; */
+
+/* text-center flex flex-col gap-8 */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  gap: 32px;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-items: center;
+
+  @media (min-width: 668px) {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    align-content: space-between;
+  }
+}

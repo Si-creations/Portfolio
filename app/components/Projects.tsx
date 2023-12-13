@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <div>
       <h1>Projects</h1>
-      <div className="project-container flex flex-col  items-center  min-h-screen">
+      <div className="grid">
         <div className="Project-1 w-full">
           <Image
             width={450}
@@ -68,6 +68,7 @@ export default function Projects() {
           </div>
         </div>
       </div>
+      <div className="line"></div>
     </div>
   );
 }

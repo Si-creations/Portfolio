@@ -12,10 +12,10 @@ export default function Home() {
         <Nav />
         <div className="flex flex-col  items-center  min-h-screen sm:flex-row sm:gap-16 justify-between">
           <div>
-            <h1 className="text-center my-6">
+            <h1 className="text-center my-6 sm:text-left">
               Wellcome to my page! <br></br> I'm Silvester Mroček.
             </h1>
-            <h2 className="text-center p-10">
+            <h2 className="text-center p-10 sm:text-left sm:pl-0">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
               tempore cupiditate sapiente beatae inventore!
             </h2>
@@ -29,7 +29,7 @@ export default function Home() {
             className="my-4 rounded-xl max-w-full"
           />
         </div>
-        <div className="flex flex-col  items-center mb-20">
+        <div className=" w-full flex flex-col mb-20">
           <div className="line"></div>
           <Experience />
           <div className="line"></div>
