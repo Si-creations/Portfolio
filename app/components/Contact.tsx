@@ -10,7 +10,7 @@ export default function Contact() {
   };
 
   return (
-    <div>
+    <div className="bg-gray1 pt-8 pb-6">
       <div className="max-w-7xl mx-auto  flex flex-col sm:flex-row sm:gap-20 sm:px-4">
         <div className="contact flex flex-col text-center pb-8 sm:text-left">
           <h1>Contact</h1>

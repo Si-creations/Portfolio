@@ -1,5 +1,5 @@
 import Nav from "./components/Nav";
-import Experience from "./components/Experience";
+import Cards from "./components/Cards";
 import Projects from "./components/Projects";
 import Image from "next/image";
 import Photo from "@/public/doggo.jpg";
@@ -10,18 +10,20 @@ export default function Home() {
     <div>
       <main className="p-4 max-w-7xl mx-auto">
         <Nav />
-        <div className="flex flex-col  items-center  min-h-screen sm:flex-row sm:gap-16 justify-between">
+        <div className="flex flex-col  items-center  min-h-screen lg:flex-row sm:gap-36  justify-between">
           <div>
-            <h1 className="text-center my-6 sm:text-left">
-              Wellcome to my page! <br></br> I'm Silvester Mroček.
+            <h1 className="text-center my-6 lg:text-left">
+              Ahoj, <br></br> vítam ťa v mojom portfóliu.
             </h1>
-            <h2 className="text-center p-10 sm:text-left sm:pl-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-              tempore cupiditate sapiente beatae inventore!
+            <h2 className="text-center text-2xl p-10 lg:text-left sm:pl-0">
+              Jeden múdry človek raz povedal:"Lorem ipsum dolor sit amet." Ale
+              ja ti teraz poviem radšej niečo o sebe 😃.<br></br>
+              Volám sa Silvester a som začinajúci Front-end
+              programátor.Momentalne hľadám svoju prvú prácu v IT sektore.
             </h2>
           </div>
           <Image
-            width={450}
+            width={550}
             height={250}
             src={Photo}
             alt="Profile photo"
@@ -29,12 +31,8 @@ export default function Home() {
             className="my-4 rounded-xl max-w-full"
           />
         </div>
-        <div className=" w-full flex flex-col mb-20">
-          <div className="line"></div>
-          <Experience />
-          <div className="line"></div>
-        </div>
-        <Projects/>
+        <Cards />
+        <Projects />
       </main>
       <Contact />
     </div>
