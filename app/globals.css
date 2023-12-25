@@ -22,6 +22,7 @@
   body {
     overflow-x: hidden;
     background-color: #1d1d1d;
+
   }
 
   a {
@@ -69,7 +70,7 @@
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     align-content: space-between;
-    gap:110px;
+    gap: 110px;
   }
 }
 
@@ -88,10 +89,10 @@
   }
 }
 
-.centerm{
-  margin:0 auto;
+.centerm {
+  margin: 0 auto;
 }
 
-.hidden{
+.hidden {
   display: none;
 }

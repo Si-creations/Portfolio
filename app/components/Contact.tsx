@@ -10,11 +10,11 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-gray1 pt-8 pb-6">
+    <div className="bg-gray1 pt-8 pb-6 px-2">
       <div className="max-w-7xl mx-auto  flex flex-col sm:flex-row sm:gap-20 sm:px-4">
         <div className="contact flex flex-col text-center pb-8 sm:text-left">
           <h1>Contact</h1>
-          <p>
+          <p className="">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
             nemo enim iste animi numquam nihil!
           </p>
@@ -59,10 +59,10 @@ export default function Contact() {
           </form>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto sm:px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="line mx-auto"></div>
         <div className="flex flex-col sm:flex-row justify-between">
-          <h1 className="text-center">S-creations</h1>
+          <h1 className="text-center font-lobster">S-creations</h1>
           <div className="flex gap-3 justify-center items-center">
             <IoLogoGithub className="text-2xl md:text-3xl lg:text-4xl" />
             <FaFacebook className="text-2xl md:text-3xl lg:text-4xl" />
