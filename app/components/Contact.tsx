@@ -2,6 +2,7 @@
 import { IoLogoGithub } from "react-icons/io";
 import { FaFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const handleSubmit = (e: { preventDefault: () => void }) => {
@@ -62,8 +63,10 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="line mx-auto"></div>
         <div className="flex flex-col sm:flex-row justify-between">
-          <h1 className="text-center font-lobster">S-creations</h1>
-          <div className="flex gap-3 justify-center items-center">
+          <motion.div className="text-center font-lobster logo text-4xl">
+            S-creations
+          </motion.div>
+          <div className="flex gap-3 md:gap-10 justify-center items-center">
             <IoLogoGithub className="text-2xl md:text-3xl lg:text-4xl" />
             <FaFacebook className="text-2xl md:text-3xl lg:text-4xl" />
             <FaLinkedin className="text-2xl md:text-3xl lg:text-4xl" />
