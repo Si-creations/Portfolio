@@ -10,12 +10,14 @@ import { pageAnimation } from "./animation";
 
 export default function Home() {
   return (
-    <motion.main exit="exit"
-    variants={pageAnimation}
-    initial="hidden"
-    animate="show">
-        <Nav />
-      <div className="p-4 max-w-7xl mx-auto">
+    <motion.main
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
+      <Nav />
+      <div className="page-width p-4 max-w-7xl mx-auto">
         <About />
         <Cards />
         <Projects />

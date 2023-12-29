@@ -1,7 +1,7 @@
 export const pageAnimation = {
   hidden: {
     opacity: 0,
-    y: -200
+    y: -200,
   },
   show: {
     opacity: 1,
@@ -10,7 +10,7 @@ export const pageAnimation = {
       duration: 0.5,
       ease: "easeOut",
       when: "beforeChildren",
-      staggerChildren: .75, //oneskorenie medzi animáciami pre rôzne deti alebo prvky
+      staggerChildren: 0.3, //oneskorenie medzi animáciami pre rôzne deti alebo prvky
     },
   },
   exit: {
@@ -32,6 +32,28 @@ export const titleAnim = {
   },
 };
 
+export const footerAnim = {
+  hidden: { y: 200, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    },
+  },
+};
+
+export const leftIncoming = {
+  hidden: { x: -200, opacity: 0 },
+  show: { x: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+export const rightIncoming = {
+  hidden: { x: 200, opacity: 0 },
+  show: { x: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
 export const photoAnim = {
   hidden: { scale: 1.5, opacity: 0 },
   show: {
@@ -49,5 +71,27 @@ export const fade = {
   show: {
     opacity: 1,
     transition: { ease: "easeOut", duration: 0.75 },
+  },
+};
+
+export const scrollReveal = {
+  hidden: { opacity: 0, scale: 1.2, transition: { duration: 0.5 } },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+export const scrollReveal2 = {
+  hidden: { opacity: 0, scale: 0.5, transition: { duration: 0.5 } },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+    },
   },
 };

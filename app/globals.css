@@ -13,6 +13,12 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
+  --shadow-color: 125deg 80% 40%;
+  --shadow-elevation-medium: 0.6px 0.6px 1.3px hsl(var(--shadow-color) / 0),
+    3.2px 3px 6.6px hsl(var(--shadow-color) / 0.2),
+    6.5px 6px 13.3px hsl(var(--shadow-color) / 0.39),
+    13.3px 12.2px 27.1px hsl(var(--shadow-color) / 0.59);
+
   * {
     box-sizing: border-box;
     color: #ececec;
@@ -22,7 +28,6 @@
   body {
     overflow-x: hidden;
     background-color: #1d1d1d;
-
   }
 
   a {
@@ -36,18 +41,16 @@
     padding: 1rem 0rem;
   }
 
- 
   h3 {
     font-weight: bold;
     text-transform: uppercase;
     padding-bottom: 0.5rem;
   }
 
-  .logo{
+  .logo {
     font-weight: bold;
     padding: 1rem 0rem;
   }
-
 
   .line {
     width: 100%;
@@ -55,6 +58,7 @@
     background-color: white;
     transform: translateY(-50%);
     margin: 1rem 0rem;
+    box-shadow: 0px 0px 10px 10px rgba(30, 210, 45, 0.2);
   }
 }
 
@@ -104,6 +108,12 @@
   display: none;
 }
 
-.hide{
+.hide {
   overflow: hidden;
+}
+
+.shadow {
+  color: var(--shadow-color);
+  box-shadow: var(--shadow-elevation-medium);
+  border-radius: 0.5rem;
 }

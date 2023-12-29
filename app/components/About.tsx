@@ -28,13 +28,13 @@ export default function About() {
       </div>
       <motion.div
         variants={photoAnim}
-        className="my-4 selection:max-w-full"
+        className="my-4 selection:max-w-full "
       >
         <Image
           src={Photo}
           alt="Profile photo"
           priority={true}
-          className="rounded-xl shadow-xl"
+          className="rounded-xl shadow"
         />
       </motion.div>
     </div>

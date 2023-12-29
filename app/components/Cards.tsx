@@ -1,13 +1,23 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { scrollReveal } from "../animation";
+import { useScroll } from "./useScroll";
 
 export default function Cards() {
   // Stav pre sledovanie, ktorý div má byť zobrazený
   const [activeClass, setActiveClass] = useState("active");
+  const { element, controls } = useScroll();
 
   return (
-    <div className="w-full flex flex-col mb-20">
+    <motion.div
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+      className="w-full flex flex-col mb-20"
+    >
       <div className="flex justify-evenly text-sm sm:text-2xl urob active element mt-10">
         <button className="" onClick={() => setActiveClass("active")}>
           Hard Skills
@@ -55,6 +65,6 @@ export default function Cards() {
         </div>
       </div>
       <div className="line"></div>
-    </div>
+    </motion.div>
   );
 }

@@ -3,24 +3,39 @@ import { IoLogoGithub } from "react-icons/io";
 import { FaFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { useScroll } from "./useScroll";
+import { leftIncoming, rightIncoming, scrollReveal2 } from "../animation";
 
 export default function Contact() {
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     // Logika na odoslanie formulára
   };
+  const { element, controls } = useScroll();
 
   return (
     <div className="bg-gray1 pt-8 pb-6 px-2">
-      <div className="max-w-7xl mx-auto  flex flex-col sm:flex-row sm:gap-20 sm:px-4">
-        <div className="contact flex flex-col text-center pb-8 sm:text-left">
+      <motion.div className="max-w-7xl mx-auto  flex flex-col sm:flex-row sm:gap-20 sm:px-4 overflow-hidden">
+        <motion.div
+          className="contact flex flex-col text-center pb-8 sm:text-left"
+          variants={leftIncoming}
+          animate={controls}
+          initial="hidden"
+          ref={element}
+        >
           <h1>Contact</h1>
           <p className="">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
             nemo enim iste animi numquam nihil!
           </p>
-        </div>
-        <div className="form flex flex-col">
+        </motion.div>
+        <motion.div
+          className="form flex flex-col"
+          variants={rightIncoming}
+          animate={controls}
+          initial="hidden"
+          ref={element}
+        >
           <form onSubmit={handleSubmit} className="px-2">
             <label htmlFor="name">Meno:</label>
             <input
@@ -58,21 +73,51 @@ export default function Contact() {
               Odoslať
             </button>
           </form>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4">
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className="footer-container max-w-7xl mx-auto px-4"
+        variants={scrollReveal2}
+        animate={controls}
+        initial="hidden"
+        ref={element}
+      >
         <div className="line mx-auto"></div>
         <div className="flex flex-col sm:flex-row justify-between">
           <motion.div className="text-center font-lobster logo text-4xl">
             S-creations
           </motion.div>
           <div className="flex gap-3 md:gap-10 justify-center items-center">
-            <IoLogoGithub className="text-2xl md:text-3xl lg:text-4xl" />
-            <FaFacebook className="text-2xl md:text-3xl lg:text-4xl" />
-            <FaLinkedin className="text-2xl md:text-3xl lg:text-4xl" />
+            <motion.div
+              whileHover={{ scale: 1.2, rotate: 720 }}
+              whileTap={{ scale: 0.8 }}
+            >
+              <a href="https://github.com/Si-creations" target="_blank">
+                <IoLogoGithub className="text-2xl md:text-3xl lg:text-4xl cursor-pointer" />
+              </a>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.2, rotate: 720 }}
+              whileTap={{ scale: 0.8 }}
+            >
+              <a
+                href="https://www.facebook.com/silvester.mrocek"
+                target="_blank"
+              >
+                <FaFacebook className="text-2xl md:text-3xl lg:text-4xl cursor-pointer" />
+              </a>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.2, rotate: 720 }}
+              whileTap={{ scale: 0.8 }}
+            >
+              <a href="" target="_blank">
+                <FaLinkedin className="text-2xl md:text-3xl lg:text-4xl cursor-pointer" />
+              </a>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

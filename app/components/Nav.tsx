@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Nav() {
   return (
-    <div className="Nav sticky top-0 ">
+    <div className="Nav sticky top-0">
       <div className="px-4 py-2 max-w-7xl mx-auto flex   justify-center items-center bg  w-full h-15 flex-col sm:flex-row sm:justify-between">
         <motion.div
           className="font-lobster logo text-4xl"

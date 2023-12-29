@@ -1,13 +1,30 @@
 "use client";
 import Image from "next/image";
 import doggo from "@/public/doggo.jpg";
+import { motion } from "framer-motion";
+import { useScroll } from "./useScroll";
+import { scrollReveal2, fade } from "../animation";
 
 export default function Projects() {
+  const { element, controls } = useScroll();
   return (
     <div>
-      <h1>Projects</h1>
-      <div className="grid-2">
-        <div className="Project-1 w-full">
+      <motion.h1
+        variants={fade}
+        animate={controls}
+        initial="hidden"
+        ref={element}
+      >
+        Projects
+      </motion.h1>
+      <motion.div
+        className="grid-2"
+        variants={scrollReveal2}
+        animate={controls}
+        initial="hidden"
+        ref={element}
+      >
+        <motion.div className="Project-1 w-full">
           <Image
             width={450}
             height={250}
@@ -26,8 +43,8 @@ export default function Projects() {
             <div>View project</div>
             <div>View code</div>
           </div>
-        </div>
-        <div className="Project-2 w-full">
+        </motion.div>
+        <motion.div className="Project-2 w-full">
           <Image
             width={450}
             height={250}
@@ -36,7 +53,7 @@ export default function Projects() {
             priority={true}
             className="my-4 rounded-xl w-full h-80"
           />
-          <h3>Project name</h3>
+          <motion.h3>Project name</motion.h3>
           <div className="Project-techlonogy flex gap-2 mb-4">
             <div>HTML</div>
             <div>CSS</div>
@@ -46,8 +63,8 @@ export default function Projects() {
             <div>View project</div>
             <div>View code</div>
           </div>
-        </div>
-        <div className="Project-3 w-full">
+        </motion.div>
+        <motion.div className="Project-3 w-full">
           <Image
             width={450}
             height={250}
@@ -56,7 +73,7 @@ export default function Projects() {
             priority={true}
             className="my-4 rounded-xl w-full h-80"
           />
-          <h3>Project name</h3>
+          <motion.h3>Project name</motion.h3>
           <div className="Project-techlonogy flex gap-2 mb-4">
             <div>HTML</div>
             <div>CSS</div>
@@ -66,8 +83,8 @@ export default function Projects() {
             <div>View project</div>
             <div>View code</div>
           </div>
-        </div>
-        <div className="Project-3 w-full">
+        </motion.div>
+        <motion.div className="Project-4 w-full">
           <Image
             width={450}
             height={250}
@@ -76,7 +93,7 @@ export default function Projects() {
             priority={true}
             className="my-4 rounded-xl w-full h-80"
           />
-          <h3>Project name</h3>
+          <motion.h3>Project name</motion.h3>
           <div className="Project-techlonogy flex gap-2 mb-4">
             <div>HTML</div>
             <div>CSS</div>
@@ -86,41 +103,8 @@ export default function Projects() {
             <div>View project</div>
             <div>View code</div>
           </div>
-        </div>
-      </div>
-      {/* <div className="line"></div> */}
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
-
-
-{/* <div className=" w-full flex flex-col mb-20">
-      <div className="flex justify-evenly text-xl sm:text-2xl urob active element ">
-        <p>Hard Skills</p>
-        <p>Soft Skills</p>
-        <p>Viac o mne 👉</p>
-      </div>
-      <div className="line"></div>
-      <div className="hard-skills grid py-8 text-2xl md:text-4xl">
-        <div>HTML</div>
-        <div>CSS</div>
-        <div>JavaScript</div>
-        <div>TypeScript</div>
-        <div>React</div>
-        <div>Next.js</div>
-      </div>
-      <div className="line"></div>
-      <div className="soft-skills grid py-8 text-2xl md:text-4xl">
-        <div>Aktívny prístup.</div>
-        <div>Samostatnosť.</div>
-        <div>Tímová práca.</div>
-      </div>
-      <div className="hobby py-8 text-2xl md:text-4xl">
-        <ul className="flex justify-evenly">
-          <li>Hobby:</li>
-          <li>Šport 🏃</li>
-          <li>Autá 🚗</li>
-          <li>Turistika 🏔️</li>
-        </ul>
-      </div>
-    </div>*/}
