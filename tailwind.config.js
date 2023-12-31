@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#1D1D1D",
-        alt: "#308c39",
+        alt: "#23D997",
         gray: "#D9D9D9",
         gray1: "#242424",
         gray2: "#202020",
@@ -22,7 +22,7 @@ module.exports = {
       },
       fontFamily: {
         lobster: ["var(--font-lobster)"],
-        playfair: ["var(--font-playfair)"],
+        oswald:["var(--font-oswald)"],
       },
     },
   },

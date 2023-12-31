@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Playfair_Display, Lobster_Two } from "next/font/google";
+import { Oswald, Lobster_Two, Roboto } from "next/font/google";
 
 export const metadata = {
   title: "Create Next App",
@@ -7,10 +7,16 @@ export const metadata = {
 };
 
 //Define main font
-const playfair = Playfair_Display({
+const roboto = Roboto({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-roboto",
+});
+
+const oswald = Oswald({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-oswald",
 });
 const lobster = Lobster_Two({
   weight: ["700"],
@@ -24,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={`${playfair.variable} ${lobster.variable}`} lang="en">
+    <html className={`${oswald.variable} ${lobster.variable}`} lang="en">
       <body className="max-w-full font-playfair">{children}</body>
     </html>
   );

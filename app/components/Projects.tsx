@@ -30,7 +30,7 @@ export default function Projects() {
             src={doggo}
             alt="Profile photo"
             priority={true}
-            className="my-4 rounded-xl w-full h-80"
+            className="my-4 rounded-xl w-full max-h-96"
           />
           <h3>Project name</h3>
           <div className="Project-techlonogy flex gap-2 mb-4">
@@ -50,7 +50,7 @@ export default function Projects() {
             src={doggo}
             alt="Profile photo"
             priority={true}
-            className="my-4 rounded-xl w-full h-80"
+            className="my-4 rounded-xl w-full max-h-96"
           />
           <motion.h3>Project name</motion.h3>
           <div className="Project-techlonogy flex gap-2 mb-4">
@@ -70,7 +70,7 @@ export default function Projects() {
             src={doggo}
             alt="Profile photo"
             priority={true}
-            className="my-4 rounded-xl w-full h-80"
+            className="my-4 rounded-xl w-full max-h-96"
           />
           <motion.h3>Project name</motion.h3>
           <div className="Project-techlonogy flex gap-2 mb-4">
@@ -90,7 +90,7 @@ export default function Projects() {
             src={doggo}
             alt="Profile photo"
             priority={true}
-            className="my-4 rounded-xl w-full h-80"
+            className="my-4 rounded-xl w-full max-h-96"
           />
           <motion.h3>Project name</motion.h3>
           <div className="Project-techlonogy flex gap-2 mb-4">

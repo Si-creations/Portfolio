@@ -95,3 +95,19 @@ export const scrollReveal2 = {
     },
   },
 };
+
+export const rightIncomingx = {
+  hidden: { x: 200, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 1, ease: "easeOut",  },
+  },
+  exit: {
+    x: -400,
+    opacity: 0,
+    transition: {
+      duration: 2,
+    },
+  },
+};

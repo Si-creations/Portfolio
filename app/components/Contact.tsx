@@ -15,7 +15,7 @@ export default function Contact() {
 
   return (
     <div className="bg-gray1 pt-8 pb-6 px-2">
-      <motion.div className="max-w-7xl mx-auto  flex flex-col sm:flex-row sm:gap-20 sm:px-4 overflow-hidden">
+      <motion.div className="max-w-7xl mx-auto  flex flex-col sm:flex-row sm:gap-20 sm:px-4 overflow-hidden font-roboto">
         <motion.div
           className="contact flex flex-col text-center pb-8 sm:text-left"
           variants={leftIncoming}
@@ -39,7 +39,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="px-2">
             <label htmlFor="name">Meno:</label>
             <input
-              className="w-full bg-transparent border textarea textarea-accent"
+              className="w-full bg-transparent border p-2 resize-none h-auto my-inputs "
               type="text"
               id="name"
               name="name"
@@ -48,7 +48,7 @@ export default function Contact() {
 
             <label htmlFor="email">Email:</label>
             <input
-              className="w-full bg-transparent border textarea textarea-accent"
+              className="w-full bg-transparent border p-2 resize-none h-auto my-inputs"
               type="email"
               id="email"
               name="email"
@@ -59,10 +59,10 @@ export default function Contact() {
               Správa:
             </label>
             <textarea
-              className="w-full bg-transparent border textarea textarea-accent resize-none h-auto"
+              className="w-full bg-transparent border p-2 resize-none h-auto my-inputs"
               id="message"
               name="message"
-              rows={2}
+              rows={3}
               required
             ></textarea>
 
@@ -122,3 +122,5 @@ export default function Contact() {
     </div>
   );
 }
+
+// textarea style >> w-full bg-transparent border textarea textarea-accent resize-none h-auto

@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { scrollReveal } from "../animation";
 import { useScroll } from "./useScroll";
+import { leftIncoming, rightIncomingx, scrollReveal2 } from "../animation";
+import useTransitionEnd from "../util";
 
 export default function Cards() {
-  // Stav pre sledovanie, ktorý div má byť zobrazený
   const [activeClass, setActiveClass] = useState("active");
   const { element, controls } = useScroll();
 
@@ -18,26 +19,65 @@ export default function Cards() {
       ref={element}
       className="w-full flex flex-col mb-20"
     >
-      <div className="flex justify-evenly text-sm sm:text-2xl urob active element mt-10">
-        <button className="" onClick={() => setActiveClass("active")}>
-          Hard Skills
-        </button>
-        <button
-          className="cursor-pointer"
-          onClick={() => setActiveClass("soft-skills")}
-        >
-          Soft Skills
-        </button>
-        <button
-          className="cursor-pointer"
-          onClick={() => setActiveClass("hobby")}
-        >
-          Viac o mne 👉
-        </button>
+      <div className="flex justify-evenly text-sm sm:text-2xl urob active element mt-10 pb-4">
+        <div className="relative">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            className=""
+            onClick={() => setActiveClass("active")}
+          >
+            Hard Skills
+          </motion.button>
+          {activeClass === "active" && (
+            <motion.div
+              className="lineA"
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+            ></motion.div>
+          )}
+        </div>
+        <div className="relative">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            onClick={() => setActiveClass("soft-skills")}
+          >
+            Soft Skills
+          </motion.button>
+          {activeClass === "soft-skills" && (
+            <motion.div
+              className="lineA"
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+            ></motion.div>
+          )}
+        </div>
+        <div className="relative">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            onClick={() => setActiveClass("hobby")}
+          >
+            Viac o mne 👉
+          </motion.button>
+          {activeClass === "hobby" && (
+            <motion.div
+              className="lineA"
+              transition={{ duration: 0.75 }}
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+            ></motion.div>
+          )}
+        </div>
       </div>
       <div className="line"></div>
 
-      <div className={`${activeClass !== "active" && "hidden"}`}>
+      <motion.div
+        className={`${activeClass !== "active" && "hidden"}`}
+        variants={rightIncomingx}
+        animate={activeClass === "active" ? "show" : "hidden"}
+        exit="exit"
+      >
         <div className="hard-skills grid py-8 text-xl md:text-3xl">
           <div>HTML</div>
           <div>CSS</div>
@@ -46,15 +86,25 @@ export default function Cards() {
           <div>React</div>
           <div>Next.js</div>
         </div>
-      </div>
-      <div className={`${activeClass !== "soft-skills" && "hidden"}`}>
+      </motion.div>
+      <motion.div
+        className={`${activeClass !== "soft-skills" && "hidden"}`}
+        variants={rightIncomingx}
+        animate={activeClass === "soft-skills" ? "show" : "hidden"}
+        exit="exit"
+      >
         <div className="grid soft-skills  py-8 text-xl md:text-3xl">
           <div>Aktívny prístup.</div>
           <div>Samostatnosť.</div>
           <div>Tímová práca.</div>
         </div>
-      </div>
-      <div className={`${activeClass !== "hobby" && "hidden"}`}>
+      </motion.div>
+      <motion.div
+        className={`${activeClass !== "hobby" && "hidden"}`}
+        variants={rightIncomingx}
+        animate={activeClass === "hobby" ? "show" : "hidden"}
+        exit="exit"
+      >
         <div className="hobby py-8 text-xl md:text-3xl">
           <ul className="flex flex-col gap-8 items-center justify-evenly sm:flex-row ">
             <li>Hobby:</li>
@@ -63,7 +113,7 @@ export default function Cards() {
             <li>Turistika 🏔️</li>
           </ul>
         </div>
-      </div>
+      </motion.div>
       <div className="line"></div>
     </motion.div>
   );
