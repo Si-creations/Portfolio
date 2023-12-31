@@ -8,7 +8,12 @@ import { scrollReveal2, fade } from "../animation";
 export default function Projects() {
   const { element, controls } = useScroll();
   return (
-    <div>
+    <motion.div
+      variants={scrollReveal2}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <motion.h1
         variants={fade}
         animate={controls}
@@ -17,13 +22,7 @@ export default function Projects() {
       >
         Projects
       </motion.h1>
-      <motion.div
-        className="grid-2"
-        variants={scrollReveal2}
-        animate={controls}
-        initial="hidden"
-        ref={element}
-      >
+      <motion.div className="grid-2">
         <motion.div className="Project-1 w-full">
           <Image
             width={450}
@@ -105,6 +104,6 @@ export default function Projects() {
           </div>
         </motion.div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }

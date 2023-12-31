@@ -13,7 +13,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --shadow-color: 125deg 80% 40%;
+  --shadow-color: 0deg 0% 3%;
   --shadow-elevation-medium: 0.6px 0.6px 1.3px hsl(var(--shadow-color) / 0),
     3.2px 3px 6.6px hsl(var(--shadow-color) / 0.2),
     6.5px 6px 13.3px hsl(var(--shadow-color) / 0.39),

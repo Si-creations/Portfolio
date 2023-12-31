@@ -66,12 +66,13 @@ export default function Contact() {
               required
             ></textarea>
 
-            <button
-              className="mx-auto w-full my-4 p-2  btn btn-accent"
+            <motion.button
+              className="mx-auto w-full my-4 p-2  bg-alt rounded-md"
               type="submit"
+              whileTap={{ scale: 0.9 }}
             >
               Odoslať
-            </button>
+            </motion.button>
           </form>
         </motion.div>
       </motion.div>
