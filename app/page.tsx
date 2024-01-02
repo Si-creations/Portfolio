@@ -17,7 +17,7 @@ export default function Home() {
       animate="show"
     >
       <Nav />
-      <div className="page-width p-4 max-w-7xl mx-auto">
+      <div className="page-width p-4 max-w-7xl mx-auto overflow-x-hidden">
         <About />
         <Cards />
         <Projects />

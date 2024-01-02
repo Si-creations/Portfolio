@@ -12,13 +12,12 @@ export default function Projects() {
       variants={scrollReveal2}
       animate={controls}
       initial="hidden"
-      ref={element}
     >
       <motion.h1
         variants={fade}
         animate={controls}
         initial="hidden"
-        ref={element}
+
       >
         Projects
       </motion.h1>

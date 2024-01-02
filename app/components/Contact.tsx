@@ -15,26 +15,25 @@ export default function Contact() {
 
   return (
     <div className="bg-gray1 pt-8 pb-6 px-2">
-      <motion.div className="max-w-7xl mx-auto  flex flex-col sm:flex-row sm:gap-20 sm:px-4 overflow-hidden font-roboto">
+      <motion.div className="max-w-7xl mx-auto  flex flex-col sm:flex-row sm:gap-80 sm:px-4 overflow-hidden font-roboto">
         <motion.div
           className="contact flex flex-col text-center pb-8 sm:text-left"
           variants={leftIncoming}
           animate={controls}
           initial="hidden"
-          ref={element}
+          
         >
-          <h1>Contact</h1>
+          <h1>Kontakt</h1>
           <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique,
-            nemo enim iste animi numquam nihil!
+            Ak vás moja práca zaujala, pre viacej informácií ma neváhajte kontaktovať. 
           </p>
         </motion.div>
         <motion.div
-          className="form flex flex-col"
+          className="form flex  flex-col"
           variants={rightIncoming}
           animate={controls}
           initial="hidden"
-          ref={element}
+          
         >
           <form onSubmit={handleSubmit} className="px-2">
             <label htmlFor="name">Meno:</label>
@@ -81,7 +80,7 @@ export default function Contact() {
         variants={scrollReveal2}
         animate={controls}
         initial="hidden"
-        ref={element}
+        
       >
         <div className="line mx-auto"></div>
         <div className="flex flex-col sm:flex-row justify-between">
