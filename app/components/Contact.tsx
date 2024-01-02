@@ -21,7 +21,7 @@ export default function Contact() {
           variants={leftIncoming}
           animate={controls}
           initial="hidden"
-          
+          ref={element}
         >
           <h1>Kontakt</h1>
           <p className="">
@@ -33,7 +33,7 @@ export default function Contact() {
           variants={rightIncoming}
           animate={controls}
           initial="hidden"
-          
+          ref={element}
         >
           <form onSubmit={handleSubmit} className="px-2">
             <label htmlFor="name">Meno:</label>
@@ -80,7 +80,7 @@ export default function Contact() {
         variants={scrollReveal2}
         animate={controls}
         initial="hidden"
-        
+        ref={element}
       >
         <div className="line mx-auto"></div>
         <div className="flex flex-col sm:flex-row justify-between">

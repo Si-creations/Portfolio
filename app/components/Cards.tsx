@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, } from "react";
+import React, { useState, useRef } from "react";
 import { motion,AnimatePresence } from "framer-motion";
 import { scrollReveal } from "../animation";
 import { useScroll } from "./useScroll";
 import { leftIncoming, rightIncomingx, scrollReveal2 } from "../animation";
-
+import useTransitionEnd from "../util";
 
 export default function Cards() {
   const [activeClass, setActiveClass] = useState("active");
