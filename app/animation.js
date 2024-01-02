@@ -101,13 +101,13 @@ export const rightIncomingx = {
   show: {
     x: 0,
     opacity: 1,
-    transition: { duration: 1, ease: "easeOut",  },
+    transition: { duration: .5, ease: "easeOut",  },
   },
   exit: {
     x: -400,
     opacity: 0,
     transition: {
-      duration: 2,
+      duration: .5,
     },
   },
 };

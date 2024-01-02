@@ -33,7 +33,7 @@ export default function Cards() {
               className="lineA"
               transition={{ duration: 0.75 }}
               initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
+              animate={{ width: "80%" }}
             ></motion.div>
           )}
         </div>
@@ -49,7 +49,7 @@ export default function Cards() {
               className="lineA"
               transition={{ duration: 0.75 }}
               initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
+              animate={{ width: "80%" }}
             ></motion.div>
           )}
         </div>
@@ -65,14 +65,14 @@ export default function Cards() {
               className="lineA"
               transition={{ duration: 0.75 }}
               initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
+              animate={{ width: "80%" }}
             ></motion.div>
           )}
         </div>
       </div>
       <div className="line"></div>
 
-	    <AnimatePresence>
+	    <AnimatePresence mode="wait">
 		    {activeClass == "active" ? (
 		      <motion.div
 		        // className={`${activeClass !== "active" && "hidden"}`}
