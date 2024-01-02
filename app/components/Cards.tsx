@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useRef } from "react";
-import { motion } from "framer-motion";
+import React, { useState, } from "react";
+import { motion,AnimatePresence } from "framer-motion";
 import { scrollReveal } from "../animation";
 import { useScroll } from "./useScroll";
 import { leftIncoming, rightIncomingx, scrollReveal2 } from "../animation";
-import useTransitionEnd from "../util";
+
 
 export default function Cards() {
   const [activeClass, setActiveClass] = useState("active");
@@ -72,49 +72,68 @@ export default function Cards() {
       </div>
       <div className="line"></div>
 
-      <motion.div
-        className={`${activeClass !== "active" && "hidden"}`}
-        variants={rightIncomingx}
-        animate={activeClass === "active" ? "show" : "hidden"}
-        exit="exit"
-      >
-        <div className="hard-skills grid py-8 text-xl md:text-3xl">
-          <div>HTML</div>
-          <div>CSS</div>
-          <div>JavaScript</div>
-          <div>TypeScript</div>
-          <div>React</div>
-          <div>Next.js</div>
-        </div>
-      </motion.div>
-      <motion.div
-        className={`${activeClass !== "soft-skills" && "hidden"}`}
-        variants={rightIncomingx}
-        animate={activeClass === "soft-skills" ? "show" : "hidden"}
-        exit="exit"
-      >
-        <div className="grid soft-skills  py-8 text-xl md:text-3xl">
-          <div>Aktívny prístup.</div>
-          <div>Samostatnosť.</div>
-          <div>Tímová práca.</div>
-        </div>
-      </motion.div>
-      <motion.div
-        className={`${activeClass !== "hobby" && "hidden"}`}
-        variants={rightIncomingx}
-        animate={activeClass === "hobby" ? "show" : "hidden"}
-        exit="exit"
-      >
-        <div className="hobby py-8 text-xl md:text-3xl">
-          <ul className="flex flex-col gap-8 items-center justify-evenly sm:flex-row ">
-            <li>Hobby:</li>
-            <li>Šport 🏃</li>
-            <li>Autá 🚗</li>
-            <li>Turistika 🏔️</li>
-          </ul>
-        </div>
-      </motion.div>
+	    <AnimatePresence>
+		    {activeClass == "active" ? (
+		      <motion.div
+		        // className={`${activeClass !== "active" && "hidden"}`}
+		        variants={rightIncomingx}
+		        initial={"hidden"}
+		        animate={"show"}
+		        exit="exit"
+		        key={1}
+		      >
+		        <div className="hard-skills grid py-8 text-xl md:text-3xl">
+		          <div>HTML</div>
+		          <div>CSS</div>
+		          <div>JavaScript</div>
+		          <div>TypeScript</div>
+		          <div>React</div>
+		          <div>Next.js</div>
+		        </div>
+		      </motion.div>
+		    ) : ""}
+
+		    {activeClass == "soft-skills" ? (
+		      <motion.div
+		        // className={`${activeClass !== "soft-skills" && "hidden"}`}
+		        variants={rightIncomingx}
+		        initial={"hidden"}
+		        animate={"show"}
+		        exit="exit"
+		        key={2}
+		      >
+		        <div className="grid soft-skills  py-8 text-xl md:text-3xl">
+		          <div>Aktívny prístup.</div>
+		          <div>Samostatnosť.</div>
+		          <div>Tímová práca.</div>
+		        </div>
+		      </motion.div>
+		    ) : ""}
+
+		    {activeClass == "hobby" ? (
+		      <motion.div
+		        // className={`${activeClass !== "hobby" && "hidden"}`}
+		        variants={rightIncomingx}
+		        initial={"hidden"}
+		        animate={"show"}
+		        exit="exit"
+		        key={3}
+		      >
+		        <div className="hobby py-8 text-xl md:text-3xl">
+		          <ul className="flex flex-col gap-8 items-center justify-evenly sm:flex-row ">
+		            <li>Hobby:</li>
+		            <li>Šport 🏃</li>
+		            <li>Autá 🚗</li>
+		            <li>Turistika 🏔️</li>
+		          </ul>
+		        </div>
+		      </motion.div>
+		    ) : ""}
+	    </AnimatePresence>
       <div className="line"></div>
     </motion.div>
   );
 }
+
+
+
