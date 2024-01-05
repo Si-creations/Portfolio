@@ -86,7 +86,7 @@ export const scrollReveal = {
 };
 
 export const scrollReveal2 = {
-  hidden: { opacity: 0, scale: 0.5, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, scale: 0.5, },
   show: {
     opacity: 1,
     scale: 1,
@@ -101,13 +101,19 @@ export const rightIncomingx = {
   show: {
     x: 0,
     opacity: 1,
-    transition: { duration: .5, ease: "easeOut",  },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
   exit: {
     x: -400,
     opacity: 0,
     transition: {
-      duration: .5,
+      duration: 0.5,
     },
   },
+};
+
+export const lineAnim = {
+  hidden: { width: "0%" },
+  show: { width: "100%", transition: { duration: 1, ease: "easeOut" } },
+  exit: { width: "0%", transition: { duration: 1 } },
 };

@@ -8,12 +8,7 @@ import { scrollReveal2, fade } from "../animation";
 export default function Projects() {
   const { element, controls } = useScroll();
   return (
-    <motion.div
-      variants={scrollReveal2}
-      animate={controls}
-      initial="hidden"
-      ref={element}
-    >
+    <motion.div>
       <motion.h1
         variants={fade}
         animate={controls}
@@ -23,7 +18,13 @@ export default function Projects() {
         Projects
       </motion.h1>
       <motion.div className="grid-2">
-        <motion.div className="Project-1 w-full">
+        <motion.div
+          className="Project-1 w-full"
+          variants={scrollReveal2}
+          animate={controls}
+          initial="hidden"
+          ref={element}
+        >
           <Image
             width={450}
             height={250}
@@ -38,12 +39,30 @@ export default function Projects() {
             <div>CSS</div>
             <div>JS</div>
           </div>
-          <div className="options flex gap-2 mb-6 uppercase">
-            <div>View project</div>
-            <div>View code</div>
+          <div className="options flex gap-4 mb-6 uppercase">
+            <motion.div
+              className="hover:text-alt cursor-pointer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              View project
+            </motion.div>
+            <motion.div
+              className="hover:text-alt cursor-pointer"
+              whileHover={{ scale: 1.1, x: 15 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              View code
+            </motion.div>
           </div>
         </motion.div>
-        <motion.div className="Project-2 w-full">
+        <motion.div
+          className="Project-2 w-full"
+          variants={scrollReveal2}
+          animate={controls}
+          initial="hidden"
+          ref={element}
+        >
           <Image
             width={450}
             height={250}
@@ -58,12 +77,30 @@ export default function Projects() {
             <div>CSS</div>
             <div>JS</div>
           </div>
-          <div className="options flex gap-2 mb-6 uppercase">
-            <div>View project</div>
-            <div>View code</div>
+          <div className="options flex gap-4 mb-6 uppercase">
+            <motion.div
+              className="hover:text-alt cursor-pointer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              View project
+            </motion.div>
+            <motion.div
+              className="hover:text-alt cursor-pointer"
+              whileHover={{ scale: 1.1, x: 15 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              View code
+            </motion.div>
           </div>
         </motion.div>
-        <motion.div className="Project-3 w-full">
+        <motion.div
+          className="Project-3 w-full"
+          variants={scrollReveal2}
+          animate={controls}
+          initial="hidden"
+          ref={element}
+        >
           <Image
             width={450}
             height={250}
@@ -78,12 +115,30 @@ export default function Projects() {
             <div>CSS</div>
             <div>JS</div>
           </div>
-          <div className="options flex gap-2 mb-6 uppercase">
-            <div>View project</div>
-            <div>View code</div>
+          <div className="options flex gap-4 mb-6 uppercase">
+            <motion.div
+              className="hover:text-alt cursor-pointer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              View project
+            </motion.div>
+            <motion.div
+              className="hover:text-alt cursor-pointer"
+              whileHover={{ scale: 1.1, x: 15 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              View code
+            </motion.div>
           </div>
         </motion.div>
-        <motion.div className="Project-4 w-full">
+        <motion.div
+          className="Project-4 w-full"
+          variants={scrollReveal2}
+          animate={controls}
+          initial="hidden"
+          ref={element}
+        >
           <Image
             width={450}
             height={250}
@@ -98,9 +153,21 @@ export default function Projects() {
             <div>CSS</div>
             <div>JS</div>
           </div>
-          <div className="options flex gap-2 mb-6 uppercase">
-            <div>View project</div>
-            <div>View code</div>
+          <div className="options flex gap-4 mb-6 uppercase">
+            <motion.div
+              className="hover:text-alt cursor-pointer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              View project
+            </motion.div>
+            <motion.div
+              className="hover:text-alt cursor-pointer"
+              whileHover={{ scale: 1.1, x: 15 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              View code
+            </motion.div>
           </div>
         </motion.div>
       </motion.div>

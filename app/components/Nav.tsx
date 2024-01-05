@@ -23,11 +23,11 @@ export default function Nav() {
 
   const navStyle = {
     backgroundColor: scrolled ? "rgb(48, 48, 48)" : "transparent",
-    transition: 'background-color 0.5s ease',
+    transition: "background-color 0.5s ease",
   };
   return (
     <div className="Nav sticky top-0 z-10" style={navStyle}>
-      <div className="px-4 py-2 max-w-7xl mx-auto flex   justify-center items-center bg  w-full h-15 flex-col sm:flex-row sm:justify-between">
+      <div className="px-4 py-2 max-w-7xl mx-auto flex   justify-between items-center bg  w-full h-15   sm:justify-between">
         <motion.div
           className="font-lobster logo text-4xl"
           initial={{ opacity: 0, x: -200 }}
@@ -43,28 +43,19 @@ export default function Nav() {
           transition={{ duration: 1 }}
         >
           {" "}
-          <motion.div
-            whileHover={{ scale: 1.2, rotate: 720 }}
-            whileTap={{ scale: 0.8 }}
-          >
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
             <a href="https://github.com/Si-creations" target="_blank">
-              <IoLogoGithub className="text-2xl md:text-3xl lg:text-4xl cursor-pointer" />
+              <IoLogoGithub className="text-3xl md:text-4xl cursor-pointer" />
             </a>
           </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.2, rotate: 720 }}
-            whileTap={{ scale: 0.8 }}
-          >
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
             <a href="https://www.facebook.com/silvester.mrocek" target="_blank">
-              <FaFacebook className="text-2xl md:text-3xl lg:text-4xl cursor-pointer" />
+              <FaFacebook className="text-3xl md:text-4xl cursor-pointer" />
             </a>
           </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.2, rotate: 720 }}
-            whileTap={{ scale: 0.8 }}
-          >
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
             <a href="" target="_blank">
-              <FaLinkedin className="text-2xl md:text-3xl lg:text-4xl cursor-pointer" />
+              <FaLinkedin className="text-3xl md:text-4xl cursor-pointer" />
             </a>
           </motion.div>
         </motion.div>

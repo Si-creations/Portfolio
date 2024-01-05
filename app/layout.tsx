@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html className={`${oswald.variable} ${lobster.variable}`} lang="en">
-      <body className="max-w-full font-playfair">{children}</body>
+      <body className="max-w-full font-oswald">{children}</body>
     </html>
   );
 }
