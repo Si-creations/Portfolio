@@ -8,7 +8,12 @@ import { scrollReveal2, fade } from "../animation";
 export default function Projects() {
   const { element, controls } = useScroll();
   return (
-    <motion.div>
+    <motion.div
+      variants={scrollReveal2}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <motion.h1
         variants={fade}
         animate={controls}
@@ -18,13 +23,7 @@ export default function Projects() {
         Projects
       </motion.h1>
       <motion.div className="grid-2">
-        <motion.div
-          className="Project-1 w-full"
-          variants={scrollReveal2}
-          animate={controls}
-          initial="hidden"
-          ref={element}
-        >
+        <motion.div className="Project-1 w-full">
           <Image
             width={450}
             height={250}
@@ -56,13 +55,7 @@ export default function Projects() {
             </motion.div>
           </div>
         </motion.div>
-        <motion.div
-          className="Project-2 w-full"
-          variants={scrollReveal2}
-          animate={controls}
-          initial="hidden"
-          ref={element}
-        >
+        <motion.div className="Project-2 w-full">
           <Image
             width={450}
             height={250}
@@ -94,13 +87,7 @@ export default function Projects() {
             </motion.div>
           </div>
         </motion.div>
-        <motion.div
-          className="Project-3 w-full"
-          variants={scrollReveal2}
-          animate={controls}
-          initial="hidden"
-          ref={element}
-        >
+        <motion.div className="Project-3 w-full">
           <Image
             width={450}
             height={250}
@@ -132,13 +119,7 @@ export default function Projects() {
             </motion.div>
           </div>
         </motion.div>
-        <motion.div
-          className="Project-4 w-full"
-          variants={scrollReveal2}
-          animate={controls}
-          initial="hidden"
-          ref={element}
-        >
+        <motion.div className="Project-4 w-full">
           <Image
             width={450}
             height={250}
