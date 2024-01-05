@@ -20,7 +20,7 @@ export default function Projects() {
         initial="hidden"
         ref={element}
       >
-        Projects
+        Projekty
       </motion.h1>
       <motion.div className="grid-2">
         <motion.div className="Project-1 w-full">
@@ -32,7 +32,7 @@ export default function Projects() {
             priority={true}
             className="my-4 rounded-xl w-full max-h-96"
           />
-          <h3>Project name</h3>
+          <h3>Názov projektu</h3>
           <div className="Project-techlonogy flex gap-2 mb-4">
             <div>HTML</div>
             <div>CSS</div>
@@ -44,14 +44,14 @@ export default function Projects() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              View project
+              Prezriet projekt
             </motion.div>
             <motion.div
               className="hover:text-alt cursor-pointer"
               whileHover={{ scale: 1.1, x: 15 }}
               whileTap={{ scale: 0.9 }}
             >
-              View code
+              Prezrieť kód
             </motion.div>
           </div>
         </motion.div>
@@ -64,7 +64,7 @@ export default function Projects() {
             priority={true}
             className="my-4 rounded-xl w-full max-h-96"
           />
-          <motion.h3>Project name</motion.h3>
+          <motion.h3>Názov projektu</motion.h3>
           <div className="Project-techlonogy flex gap-2 mb-4">
             <div>HTML</div>
             <div>CSS</div>
@@ -76,14 +76,14 @@ export default function Projects() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              View project
+              Prezriet projekt
             </motion.div>
             <motion.div
               className="hover:text-alt cursor-pointer"
               whileHover={{ scale: 1.1, x: 15 }}
               whileTap={{ scale: 0.9 }}
             >
-              View code
+              Prezrieť kód
             </motion.div>
           </div>
         </motion.div>
@@ -96,7 +96,7 @@ export default function Projects() {
             priority={true}
             className="my-4 rounded-xl w-full max-h-96"
           />
-          <motion.h3>Project name</motion.h3>
+          <motion.h3>Názov projektu</motion.h3>
           <div className="Project-techlonogy flex gap-2 mb-4">
             <div>HTML</div>
             <div>CSS</div>
@@ -108,14 +108,14 @@ export default function Projects() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              View project
+              Prezriet projekt
             </motion.div>
             <motion.div
               className="hover:text-alt cursor-pointer"
               whileHover={{ scale: 1.1, x: 15 }}
               whileTap={{ scale: 0.9 }}
             >
-              View code
+              Prezrieť kód
             </motion.div>
           </div>
         </motion.div>
@@ -128,7 +128,7 @@ export default function Projects() {
             priority={true}
             className="my-4 rounded-xl w-full max-h-96"
           />
-          <motion.h3>Project name</motion.h3>
+          <motion.h3>Názov projektu</motion.h3>
           <div className="Project-techlonogy flex gap-2 mb-4">
             <div>HTML</div>
             <div>CSS</div>
@@ -140,14 +140,14 @@ export default function Projects() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              View project
+              Prezriet projekt
             </motion.div>
             <motion.div
               className="hover:text-alt cursor-pointer"
               whileHover={{ scale: 1.1, x: 15 }}
               whileTap={{ scale: 0.9 }}
             >
-              View code
+              Prezrieť kód
             </motion.div>
           </div>
         </motion.div>
