@@ -45,7 +45,7 @@ export default function Nav() {
           {" "}
           <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
             <a href="https://github.com/Si-creations" target="_blank">
-              <IoLogoGithub className="text-3xl md:text-4xl cursor-pointer" />
+              <IoLogoGithub className="text-3xl md:text-4xl cursor-pointer " />
             </a>
           </motion.div>
           <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
