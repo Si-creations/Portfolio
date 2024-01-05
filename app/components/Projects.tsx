@@ -8,7 +8,7 @@ import { scrollReveal2, fade } from "../animation";
 export default function Projects() {
   const { element, controls } = useScroll();
   return (
-    <motion.div
+    <motion.div className="pt-20 page-container"
       variants={scrollReveal2}
       animate={controls}
       initial="hidden"
@@ -44,7 +44,7 @@ export default function Projects() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              Prezriet projekt
+              Prezrieť projekt
             </motion.div>
             <motion.div
               className="hover:text-alt cursor-pointer"
@@ -76,7 +76,7 @@ export default function Projects() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              Prezriet projekt
+              Prezrieť projekt
             </motion.div>
             <motion.div
               className="hover:text-alt cursor-pointer"
@@ -108,7 +108,7 @@ export default function Projects() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              Prezriet projekt
+              Prezrieť projekt
             </motion.div>
             <motion.div
               className="hover:text-alt cursor-pointer"
@@ -140,7 +140,7 @@ export default function Projects() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              Prezriet projekt
+              Prezrieť projekt
             </motion.div>
             <motion.div
               className="hover:text-alt cursor-pointer"

@@ -7,12 +7,6 @@ export const metadata = {
 };
 
 //Define main font
-const roboto = Roboto({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  variable: "--font-roboto",
-});
-
 const oswald = Oswald({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
@@ -31,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html className={`${oswald.variable} ${lobster.variable}`} lang="en">
-      <body className="max-w-full font-oswald">{children}</body>
+      <body className="max-w-full font-oswald ">{children}</body>
     </html>
   );
 }

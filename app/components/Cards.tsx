@@ -16,7 +16,7 @@ export default function Cards() {
       animate={controls}
       initial="hidden"
       ref={element}
-      className="w-full flex flex-col mb-20"
+      className="w-full flex flex-col  page-container"
     >
       <div className="flex justify-evenly text-sm sm:text-2xl urob active element mt-10 pb-4">
         <div className="relative">

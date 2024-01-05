@@ -27,7 +27,7 @@ export default function Nav() {
   };
   return (
     <div className="Nav sticky top-0 z-10" style={navStyle}>
-      <div className="px-4 py-2 max-w-7xl mx-auto flex   justify-between items-center bg  w-full h-15   sm:justify-between">
+      <div className="page-container flex  justify-between items-center w-full h-15 ">
         <motion.div
           className="font-lobster logo text-4xl"
           initial={{ opacity: 0, x: -200 }}

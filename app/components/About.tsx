@@ -5,7 +5,7 @@ import { titleAnim, photoAnim, fade } from "../animation";
 
 export default function About() {
   return (
-    <div className="flex flex-col  items-center  min-h-screen lg:flex-row sm:gap-36  justify-between">
+    <div className="flex flex-col  items-center  min-h-screen lg:flex-row sm:gap-36  justify-between page-container">
       <div className="title">
         <div className="hide text-center lg:text-left">
           <motion.h1 variants={titleAnim}>Ahoj!</motion.h1>
@@ -17,7 +17,7 @@ export default function About() {
         </div>
         <motion.div variants={fade}>
           <motion.h2 className="text-center text-2xl p-10 lg:text-left sm:pl-0">
-            Jeden múdry človek raz povedal:"Lorem ipsum dolor sit amet." Ale ja
+            Jeden múdry človek raz povedal: "Lorem ipsum dolor sit amet." Ale ja
             ti teraz poviem radšej niečo o sebe 😃.
           </motion.h2>
           <motion.h2 className="text-center text-2xl pb-8 lg:text-left sm:pl-0">
@@ -26,10 +26,7 @@ export default function About() {
           </motion.h2>
         </motion.div>
       </div>
-      <motion.div
-        variants={photoAnim}
-        className="my-4 selection:max-w-full "
-      >
+      <motion.div variants={photoAnim} className="my-4 w-full ">
         <Image
           src={Photo}
           alt="Profile photo"
