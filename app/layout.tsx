@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Oswald, Lobster_Two, Roboto } from "next/font/google";
+import { Oswald, Lobster_Two } from "next/font/google";
 
 export const metadata = {
   title: "Create Next App",

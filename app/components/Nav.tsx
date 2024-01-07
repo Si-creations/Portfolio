@@ -37,7 +37,7 @@ export default function Nav() {
           S-creations
         </motion.div>
         <motion.div
-          className="flex gap-3 md:gap-10"
+          className="flex gap-4 md:gap-10"
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}

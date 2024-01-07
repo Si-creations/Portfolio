@@ -22,9 +22,9 @@ module.exports = {
       },
       fontFamily: {
         lobster: ["var(--font-lobster)"],
-        oswald:["var(--font-oswald)"],
+        oswald: ["var(--font-oswald)"],
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [],
 };

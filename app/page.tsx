@@ -10,7 +10,7 @@ import { pageAnimation } from "./animation";
 
 export default function Home() {
   return (
-    <motion.main
+    <motion.main 
       exit="exit"
       variants={pageAnimation}
       initial="hidden"
