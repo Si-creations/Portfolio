@@ -11,7 +11,7 @@ export default function Cards() {
   const { element, controls } = useScroll();
 
   return (
-    <div ref={element}>
+    <div ref={element} className="overflow-hidden">
       <motion.div
         variants={scrollReveal}
         animate={controls}

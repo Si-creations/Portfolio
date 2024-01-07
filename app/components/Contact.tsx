@@ -1,15 +1,38 @@
 "use client";
+
+import { useEffect } from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { FaFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { useScroll } from "./useScroll";
 import { leftIncoming, rightIncoming, scrollReveal2 } from "../animation";
+import emailjs from 'emailjs-com'
 
 export default function Contact() {
-  const handleSubmit = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    // Logika na odoslanie formulára
+  const key = process.env.PUBLIC_KEY!;
+
+  useEffect(() => {
+    // Načítanie email.js knižnice
+    const script = document.createElement("script");
+    script.src =
+      "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js";
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      // Inicializácia email.js s verejným kľúčom
+      emailjs.init(key);
+    };
+
+    // Odstránenie skriptu pri nevyužití (unmount)
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event;
   };
   const { element, controls } = useScroll();
 
@@ -36,7 +59,7 @@ export default function Contact() {
           initial="hidden"
           ref={element}
         >
-          <form onSubmit={handleSubmit} className="px-2">
+          <form onSubmit={handleFormSubmit} className="px-2">
             <label htmlFor="name">Meno:</label>
             <input
               className="w-full bg-transparent border p-2 resize-none h-auto my-inputs "
