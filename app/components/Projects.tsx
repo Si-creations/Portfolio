@@ -60,7 +60,7 @@ export default function Projects() {
 
                 <motion.div
                   className="hover:text-alt cursor-pointer"
-                  whileHover={{ scale: 1.1, x: 15 }}
+                  whileHover={{ scale: 1.1, x: 10 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   <a href={data.gitLink} target="blank">
@@ -75,7 +75,3 @@ export default function Projects() {
     </div>
   );
 }
-
-// {cartStore.cart.map((item) => (
-//
-// ))}

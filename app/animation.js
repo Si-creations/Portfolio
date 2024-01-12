@@ -72,6 +72,10 @@ export const fade = {
     opacity: 1,
     transition: { ease: "easeOut", duration: 0.75 },
   },
+  exit: {
+    opacity: 0,
+    transition: { ease: "easeOut", duration: 0.75 },
+  },
 };
 
 export const scrollReveal = {
@@ -86,7 +90,7 @@ export const scrollReveal = {
 };
 
 export const scrollReveal2 = {
-  hidden: { opacity: 0, scale: 0.5, },
+  hidden: { opacity: 0, scale: 0.5 },
   show: {
     opacity: 1,
     scale: 1,

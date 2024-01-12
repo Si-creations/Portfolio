@@ -5,7 +5,7 @@ import { useAnimationControls } from "framer-motion";
 export const useScroll = () => {
   const controls = useAnimationControls();
   const [element, inView] = useInView({ threshold: 0.2 });
-  console.log(inView);
+  // console.log(inView);
   useEffect(() => {
     if (inView) {
       controls.start("show");

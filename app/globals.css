@@ -52,17 +52,12 @@ h3 {
   padding-bottom: 0.5rem;
 }
 
-.page-container{
-  padding: .5rem 1rem .5rem 1rem;
+.page-container {
+  padding: 0.5rem 1rem 0.5rem 1rem;
   max-width: 80rem;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-}
-
-.logo {
-  font-weight: bold;
-  padding: 1rem 0rem;
 }
 
 .line {
@@ -151,3 +146,15 @@ h3 {
   }
 }
 
+.confirmation-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: gray;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 2%;
+  z-index: 999;
+  max-width: 50%;
+}

@@ -13,11 +13,11 @@ export default function About() {
           </motion.h1>
         </div>
         <motion.div variants={fade}>
-          <motion.h2 className="text-center  text-xl sm:text-2xl p-10 md:text-left sm:pl-0">
+          <motion.h2 className="text-center  text-xl sm:text-2xl py-10 md:text-left sm:pl-0">
             Jeden múdry človek raz povedal: "Lorem ipsum dolor sit amet." Ale ja
             ti teraz poviem radšej niečo o sebe 😃.
           </motion.h2>
-          <motion.h2 className="text-center text-xl sm:text-2xl pb-8 md:text-left sm:pl-0">
+          <motion.h2 className="text-center text-xl sm:text-2xl  md:text-left sm:pl-0">
             Volám sa Silvester a som začinajúci Front-end programátor.
             Momentálne hľadám svoju prvú prácu v IT sektore.
           </motion.h2>
