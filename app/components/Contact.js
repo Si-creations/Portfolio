@@ -9,22 +9,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useScroll } from "./useScroll";
 import { leftIncoming, rightIncoming, scrollReveal2, fade } from "../animation";
 import emailjs from "@emailjs/browser";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 export default function Contact() {
-  const key = process.env.NEXT_PUBLIC_KEY;
-  const service = process.env.NEXT_PUBLIC_SERVICE_ID;
-  const template = process.env.NEXT_PUBLIC_TEMPLATE_ID;
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [showError, setShowError] = useState(false);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const sendEmail = () => {
     emailjs
       .sendForm(
-        service as string,
-        template as string,
-        e.currentTarget,
-        key as string
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        `#contact-form`,
+        process.env.NEXT_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -36,9 +34,27 @@ export default function Contact() {
           setShowError(true);
         }
       );
-
-    e.currentTarget.reset();
   };
+
+  const formik = useFormik({
+    initialValues: {
+      user_name: "",
+      user_email: "",
+      message: "",
+    },
+    onSubmit: (values) => {
+      
+      sendEmail();
+      formik.resetForm();
+    },
+    validationSchema: Yup.object({
+      user_name: Yup.string().required("Toto pole prosím vyplniť 🙂"),
+      user_email: Yup.string()
+        .email("Je potrebné zadať správny tvar e-mailu")
+        .required("Toto pole prosím tiež vyplniť 🙂"),
+      message: Yup.string().required("Bez správy by to asi nešlo 😐"),
+    }),
+  });
 
   const { element, controls } = useScroll();
 
@@ -46,7 +62,7 @@ export default function Contact() {
     <div className="bg-gray1 pt-8 pb-8 px-2 mt-12" ref={element}>
       <motion.div className="max-w-7xl mx-auto  flex flex-col sm:flex-row md:gap-60 sm:px-4 overflow-hidden font-roboto">
         <motion.div
-          className="contact flex flex-col text-center pb-8 sm:text-left"
+          className="contact w-full flex flex-col text-center pb-8 sm:text-left"
           variants={leftIncoming}
           animate={controls}
           initial="hidden"
@@ -59,40 +75,58 @@ export default function Contact() {
           </p>
         </motion.div>
         <motion.div
-          className="form flex  flex-col"
+          className="form flex w-full  flex-col"
           variants={rightIncoming}
           animate={controls}
           initial="hidden"
           ref={element}
         >
-          <form onSubmit={sendEmail} className="px-2" autoComplete="off">
-            <label htmlFor="name">Meno:</label>
+          <form id="contact-form" onSubmit={formik.handleSubmit} className="px-2">
+            {formik.touched.user_name && formik.errors.user_name ? (
+              <div className="w-full  text-error">
+                {formik.errors.user_name}
+              </div>
+            ) : null}
+            
             <input
               className="w-full bg-transparent border p-2 resize-none h-auto my-inputs "
               type="text"
-              id="name"
+              id="user_name"
               name="user_name"
-              required
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.user_name}
+              placeholder="Meno"
             />
 
-            <label htmlFor="email">Email:</label>
+            {formik.touched.user_email && formik.errors.user_email ? (
+              <div className="w-full text-error">{formik.errors.user_email}</div>
+            ) : null}
+            
             <input
               className="w-full bg-transparent border p-2 resize-none h-auto my-inputs"
               type="email"
-              id="email"
+              id="user_email"
               name="user_email"
-              required
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.user_email}
+              placeholder="Email"
             />
 
-            <label className="" htmlFor="message">
-              Správa:
-            </label>
+            {formik.touched.message && formik.errors.message ? (
+              <div className="w-full text-error">{formik.errors.message}</div>
+            ) : null}
+            
             <textarea
               className="w-full bg-transparent border p-2 resize-none h-auto my-inputs"
               id="message"
               name="message"
               rows={3}
-              required
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
+              placeholder="Správa"
             ></textarea>
 
             <motion.button
