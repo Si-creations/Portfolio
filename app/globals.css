@@ -29,6 +29,7 @@ html,
 body {
   background-color: #1d1d1d;
   min-width: 320px;
+  scroll-behavior:smooth;
 }
 
 a {
@@ -73,7 +74,6 @@ h3 {
   border: 2px solid rgb(141, 139, 139);
   border-radius: 0.4rem;
   color: rgb(141, 139, 139);
-  margin-bottom: 2rem;
 }
 
 .grid {
@@ -115,10 +115,6 @@ h3 {
   display: none;
 }
 
-.hide {
-  overflow: hidden;
-}
-
 .shadow {
   color: var(--shadow-color);
   box-shadow: var(--shadow-elevation-medium);
@@ -127,6 +123,7 @@ h3 {
 
 .my-inputs {
   color: #ececec;
+  background-color: rgba(255,255,255,0) !important;
 }
 
 .my-inputs:focus {
@@ -157,4 +154,37 @@ h3 {
   border-radius: 2%;
   z-index: 999;
   max-width: 50%;
+
+  @media (max-width: 780px) {
+    min-width:80%;
+    padding: 10px;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #adabab;
+}
+
+/* Farba a zaoblenie handle scrollbaru */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+/* Zmena farby handle scrollbaru po hoveri */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }

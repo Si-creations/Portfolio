@@ -121,3 +121,17 @@ export const lineAnim = {
   show: { width: "100%", transition: { duration: 1, ease: "easeOut" } },
   exit: { width: "0%", transition: { duration: 1 } },
 };
+
+export const pull = {
+  hidden: { opacity: 0, y: -200 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { ease: "easeOut", duration: 0.75 },
+  },
+  exit: {
+    
+    y: 100,
+    transition: { ease: "easeOut", duration: 0.75 },
+  },
+};

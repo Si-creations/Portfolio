@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="flex flex-col  items-center  min-h-screen md:flex-row lg:gap-36 gap-6 sm:justify-between  page-container">
       <div className="title w-full">
-        <div className="hide text-center md:text-left">
+        <div className="overflow-hidden text-center md:text-left">
           <motion.h1 variants={titleAnim}>
             Ahoj, vítam ťa v mojom portfóliu.
           </motion.h1>
@@ -15,7 +15,7 @@ export default function About() {
         <motion.div variants={fade}>
           <motion.h2 className="text-center  text-xl sm:text-2xl py-10 md:text-left sm:pl-0">
             Jeden múdry človek raz povedal: "Lorem ipsum dolor sit amet." Ale ja
-            ti teraz poviem radšej niečo o sebe 😃.
+            ti teraz poviem radšej niečo o sebe 👇.
           </motion.h2>
           <motion.h2 className="text-center text-xl sm:text-2xl  md:text-left sm:pl-0">
             Volám sa Silvester a som začinajúci Front-end programátor.

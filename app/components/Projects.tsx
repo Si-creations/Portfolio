@@ -28,8 +28,8 @@ export default function Projects() {
         <motion.div className="grid-2">
           {dataNames.map((data) => (
             <motion.div
-              className="Project hover:bg-opacity-50  bg-gray1 px-4 rounded-xl"
-              key={data.id} whileHover={{ scale: 1.06 }}
+              className="Project hover:bg-opacity-50 md:hover:scale-105  bg-gray1 px-4 rounded-xl"
+              key={data.id} 
             >
               <motion.div className="w-full">
                 <a href={data.link} target="blank">
