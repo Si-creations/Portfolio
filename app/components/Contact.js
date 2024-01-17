@@ -103,7 +103,7 @@ export default function Contact() {
               placeholder="Meno"
             />
 
-            <div className="h-5 overflow-y-hidden relative">
+            <div className="h-6 overflow-y-hidden relative">
               <AnimatePresence mode="wait">
                 {formik.touched.user_name && formik.errors.user_name ? (
                   <motion.div
@@ -130,7 +130,7 @@ export default function Contact() {
               value={formik.values.user_email}
               placeholder="Email"
             />
-            <div className="h-5 overflow-y-hidden relative">
+            <div className="h-6 overflow-y-hidden relative">
               <AnimatePresence mode="wait">
                 {formik.touched.user_email && formik.errors.user_email ? (
                   <motion.div
@@ -158,7 +158,7 @@ export default function Contact() {
               placeholder="Správa"
             ></textarea>
 
-            <div className="h-5 overflow-y-hidden relative">
+            <div className="h-6 overflow-y-hidden relative">
               <AnimatePresence mode="wait">
                 {formik.touched.message && formik.errors.message ? (
                   <motion.div
