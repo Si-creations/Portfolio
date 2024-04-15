@@ -18,7 +18,7 @@ export default function About() {
             ti teraz poviem radšej niečo o sebe 👇.
           </motion.h2>
           <motion.h2 className="text-center text-xl sm:text-2xl  md:text-left sm:pl-0">
-            Volám sa Silvester a som začinajúci Front-end programátor.
+            Volám sa Silvester a som začinajúci Full-stack programátor.
             Momentálne hľadám svoju prvú prácu v IT sektore.
           </motion.h2>
         </motion.div>

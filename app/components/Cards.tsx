@@ -83,7 +83,6 @@ export default function Cards() {
         <AnimatePresence mode="wait">
           {activeClass == "active" ? (
             <motion.div
-              // className={`${activeClass !== "active" && "hidden"}`}
               variants={rightIncomingx}
               initial={"hidden"}
               animate={"show"}
@@ -105,7 +104,6 @@ export default function Cards() {
 
           {activeClass == "soft-skills" ? (
             <motion.div
-              // className={`${activeClass !== "soft-skills" && "hidden"}`}
               variants={rightIncomingx}
               initial={"hidden"}
               animate={"show"}
@@ -114,8 +112,8 @@ export default function Cards() {
             >
               <div className="flex flex-col gap-8 items-center justify-evenly sm:flex-row soft-skills  py-8 text-xl md:text-3xl h-96 sm:h-64">
                 <div>Aktívny prístup a motivácia.</div>
+                <div>Zodpovednosť</div>
                 <div>Záujem o nové vedomosti.</div>
-                <div>Potešenie z tímovej práce.</div>
               </div>
             </motion.div>
           ) : (
@@ -124,7 +122,6 @@ export default function Cards() {
 
           {activeClass == "hobby" ? (
             <motion.div
-              // className={`${activeClass !== "hobby" && "hidden"}`}
               variants={rightIncomingx}
               initial={"hidden"}
               animate={"show"}
