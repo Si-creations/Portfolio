@@ -110,7 +110,7 @@ export default function Cards() {
               exit="exit"
               key={2}
             >
-              <div className="flex flex-col gap-8 items-center justify-evenly sm:flex-row soft-skills  py-8 text-xl md:text-3xl h-96 sm:h-64">
+              <div className="flex  flex-col gap-8 items-center justify-evenly text-center  sm:flex-row soft-skills  py-8 text-xl md:text-3xl h-96 sm:h-64">
                 <div>Aktívny prístup a motivácia.</div>
                 <div>Zodpovednosť</div>
                 <div>Záujem o nové vedomosti.</div>

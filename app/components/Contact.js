@@ -239,7 +239,7 @@ export default function Contact() {
       >
         <div className="line mx-auto"></div>
         <div className="flex flex-col sm:flex-row justify-between">
-          <motion.div className="text-center font-lobster logo text-4xl">
+          <motion.div className="text-center font-lobster logo text-4xl my-4">
             S-creations
           </motion.div>
           <div className="flex gap-4 md:gap-10 justify-center items-center">

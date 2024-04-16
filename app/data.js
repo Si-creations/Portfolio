@@ -13,8 +13,8 @@ function projectData() {
       link:"https://weather-app-two-orpin-36.vercel.app/",
       gitLink:"https://github.com/Si-creations/Weather-app",
       technology: ["html", "scss", "js","ts","api"],
-      buttonName1: "Prezriet kód",
-      buttonName2: "Prezriet projekt",
+      buttonName1: "Prezriet projekt",
+      buttonName2: "Prezriet kód",
       id: uuidv4(),
     },
     {
